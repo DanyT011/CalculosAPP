@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">CalculosAPP</string>
+    <string name="opciones">Opciones</string>
+    <string name="areas">Areas</string>
+    <string name="volumnes">Volúmenes</string>
+    <string name="operaciones_realiadas">Operaciones Realizadas</string>
+    <string name="cuadrado">Cuadrado</string>
+    <string name="rectangulo">Rectángulo</string>
+    <string name="triangulo">Triángulo</string>
+    <string name="circulo">Círculo</string>
+    <string name="esfera">Esfera</string>
+    <string name="cilindro">Cilindro</string>
+    <string name="cono">Cono</string>
+    <string name="cubo">Cubo</string>
+
+
+    <string-array name="opciones">
+        <item>@string/areas</item>
+        <item>@string/volumnes</item>
+        <item>@string/operaciones_realiadas</item>
+    </string-array>
+
+    <string-array name="figuras_area">
+        <item>@string/cuadrado</item>
+        <item>@string/rectangulo</item>
+        <item>@string/triangulo</item>
+        <item>@string/circulo</item>
+    </string-array>
+
+    <string-array name="figuras_volumen">
+        <item>@string/esfera</item>
+        <item>@string/cilindro</item>
+        <item>@string/cono</item>
+        <item>@string/cubo</item>
+    </string-array>
+</resources>
