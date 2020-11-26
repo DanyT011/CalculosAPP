@@ -42,4 +42,8 @@ public class CalcularCuadrado extends AppCompatActivity {
         intent.putExtras(param);
         startActivity(intent);
     }
+
+    public void limpiar(View v){
+        lado.setText("");
+    }
 }

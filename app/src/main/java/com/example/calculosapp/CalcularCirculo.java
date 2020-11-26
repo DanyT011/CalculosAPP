@@ -23,10 +23,9 @@ public class CalcularCirculo extends AppCompatActivity {
         calcularCir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                calcularcirculo();
             }
         });
-        calcularcirculo();
     }
 
     public void calcularcirculo(){
@@ -38,5 +37,9 @@ public class CalcularCirculo extends AppCompatActivity {
         param.putDouble("area", area);
         intent.putExtras(param);
         startActivity(intent);
+    }
+
+    public void limpiar(View v){
+        radio.setText("");
     }
 }

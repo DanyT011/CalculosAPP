@@ -30,7 +30,7 @@ public class EscogerFigurasVolumen extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        intent = new Intent(EscogerFigurasVolumen.this, CalcularVolumenes.class);
+                        intent = new Intent(EscogerFigurasVolumen.this, CalcularEsferas.class);
                         startActivity(intent);
                         break;
                 }

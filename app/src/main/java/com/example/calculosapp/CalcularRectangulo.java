@@ -40,4 +40,10 @@ public class CalcularRectangulo extends AppCompatActivity {
         intent.putExtras(param);
         startActivity(intent);
     }
+
+    public void limpiar(View v){
+        ladoBase.setText("");
+        ladoAltura.setText("");
+        ladoBase.requestFocus();
+    }
 }
