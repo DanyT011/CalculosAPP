@@ -30,9 +30,20 @@ public class EscogerFigurasArea extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        intent = new Intent(EscogerFigurasArea.this, CalcularAreas.class);
+                        intent = new Intent(EscogerFigurasArea.this, CalcularCuadrado.class);
                         startActivity(intent);
                         break;
+                    case 1:
+                        intent = new Intent(EscogerFigurasArea.this, CalcularRectangulo.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(EscogerFigurasArea.this, CalcularTriangulo.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(EscogerFigurasArea.this, CalcularCirculo.class);
+                        startActivity(intent);
                 }
             }
         });

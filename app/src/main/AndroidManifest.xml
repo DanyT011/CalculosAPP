@@ -9,8 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculosAPP">
-        <activity android:name=".CalcularVolumenes"></activity>
-        <activity android:name=".CalcularAreas" />
+        <activity android:name=".ResultadoCirculo"></activity>
+        <activity android:name=".ResultadoTriangulo" />
+        <activity android:name=".ResultadoRectangulo" />
+        <activity android:name=".ResultadoCuadrado" />
+        <activity android:name=".CalcularCirculo" />
+        <activity android:name=".CalcularRectangulo" />
+        <activity android:name=".CalcularTriangulo" />
+        <activity android:name=".CalcularVolumenes" />
+        <activity android:name=".CalcularCuadrado" />
         <activity android:name=".EscogerFigurasArea" />
         <activity android:name=".EscogerFigurasVolumen" />
         <activity android:name=".MainActivity">
