@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CalcularEsferas">
+    tools:context=".CalcularCilindro">
 
     <TextView
-        android:id="@+id/lblCalcularEsfera"
+        android:id="@+id/lblCalcularCilindro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/esfera"
+        android:hint="@string/cilindro"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -22,15 +22,27 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="210sp"
+            android:layout_width="215sp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/lblRadioEsfera"
+                android:id="@+id/lblRadioCilindro"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="@string/radio" />
+                android:layout_height="45dp"
+                android:hint="@string/radio"
+                android:textAlignment="viewStart"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblAlturaCilindro"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:hint="@string/altura"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -39,7 +51,14 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/txtRadioEsfera"
+                android:id="@+id/txtRadioCilindro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/txtAlturaCilindro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -53,14 +72,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnCalcularEsfera"
+            android:id="@+id/btnCalcularCilindro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/calcular" />
 
         <Button
-            android:id="@+id/btnBorrarEsfera"
+            android:id="@+id/btnBorrarCilindro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

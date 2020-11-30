@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculosAPP">
-        <activity android:name=".CalcularEsferas"></activity>
+        <activity android:name=".ResultadoCubo"></activity>
+        <activity android:name=".CalcularCubo" />
+        <activity android:name=".ResultadoCono" />
+        <activity android:name=".CalcularCono" />
+        <activity android:name=".ResultadoCilindro" />
+        <activity android:name=".CalcularCilindro" />
+        <activity android:name=".ResultadoEsfera" />
+        <activity android:name=".CalcularEsferas" />
         <activity android:name=".ResultadoCirculo" />
         <activity android:name=".ResultadoTriangulo" />
         <activity android:name=".ResultadoRectangulo" />

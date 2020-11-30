@@ -20,6 +20,7 @@
     <string name="lado_base">Lado Base:</string>
     <string name="lado_altura">Lado Altura:</string>
     <string name="radio">Radio:</string>
+    <string name="altura">Altura:</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>

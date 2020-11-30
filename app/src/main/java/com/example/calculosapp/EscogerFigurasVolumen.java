@@ -33,6 +33,16 @@ public class EscogerFigurasVolumen extends AppCompatActivity {
                         intent = new Intent(EscogerFigurasVolumen.this, CalcularEsferas.class);
                         startActivity(intent);
                         break;
+                    case 1:
+                        intent = new Intent(EscogerFigurasVolumen.this, CalcularCilindro.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(EscogerFigurasVolumen.this, CalcularCono.class);
+                        startActivity(intent);
+                    case 3:
+                        intent = new Intent(EscogerFigurasVolumen.this, CalcularCubo.class);
+                        startActivity(intent);
                 }
             }
         });

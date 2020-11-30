@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResultadoCubo">
+
+    <TextView
+        android:id="@+id/lblTituloCubo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/cubo"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblResultadoCubo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/resultado"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textResultadoCubo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnOkCubo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ok" />
+</LinearLayout>
