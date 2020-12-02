@@ -21,6 +21,10 @@
     <string name="lado_altura">Lado Altura:</string>
     <string name="radio">Radio:</string>
     <string name="altura">Altura:</string>
+    <string name="numero">No</string>
+    <string name="operaciones">Operaciones</string>
+    <string name="datos">Datos</string>
+    <string name="guardar">Guardar</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>

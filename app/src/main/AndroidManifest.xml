@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CalculosAPP">
-        <activity android:name=".ResultadoCubo"></activity>
+        <activity android:name=".OperacionesRealizadas"></activity>
+        <activity android:name=".ResultadoCubo" />
         <activity android:name=".CalcularCubo" />
         <activity android:name=".ResultadoCono" />
         <activity android:name=".CalcularCono" />

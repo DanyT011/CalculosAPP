@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OperacionesRealizadas">
+
+    <TextView
+        android:id="@+id/lblOperacionesRealizadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/operaciones_realiadas"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/tblOperaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:id="@+id/flEnunciados"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/numero"
+                android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/lblOperacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/operaciones"
+                android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/lblDatos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/datos"
+                android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/lblResultadoOp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/resultado" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
