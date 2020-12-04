@@ -40,6 +40,7 @@ public class EscogerFigurasVolumen extends AppCompatActivity {
                     case 2:
                         intent = new Intent(EscogerFigurasVolumen.this, CalcularCono.class);
                         startActivity(intent);
+                        break;
                     case 3:
                         intent = new Intent(EscogerFigurasVolumen.this, CalcularCubo.class);
                         startActivity(intent);

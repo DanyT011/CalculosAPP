@@ -35,10 +35,11 @@ public class OperacionesRealizadas extends AppCompatActivity {
             columna_tres.setText(operaciones.get(i).getDatos());
             columna_cuatro.setText(operaciones.get(i).getResultado());
 
-            columna_uno.setGravity(Gravity.CENTER_HORIZONTAL);
-            columna_dos.setGravity(Gravity.CENTER_HORIZONTAL);
-            columna_tres.setGravity(Gravity.CENTER_HORIZONTAL);
-            columna_cuatro.setGravity(Gravity.CENTER_HORIZONTAL);
+            fila.addView(columna_uno);
+            fila.addView(columna_dos);
+            fila.addView(columna_tres);
+            fila.addView(columna_cuatro);
+
             tabla.addView(fila);
         }
     }

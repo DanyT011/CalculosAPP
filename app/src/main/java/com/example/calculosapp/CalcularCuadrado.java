@@ -5,18 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+
 
 public class CalcularCuadrado extends AppCompatActivity {
-    private TextView operacion, resultado;
+    private TextView operacion;
     private EditText lado;
-    Button calcular, guardar;
+    Button calcular;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,6 @@ public class CalcularCuadrado extends AppCompatActivity {
         operacion = findViewById(R.id.txtCuadrado);
         lado = findViewById(R.id.txtLado);
         calcular = findViewById(R.id.btnCalcular);
-        guardar = findViewById(R.id.btnGuardarCuadrado);
-        resultado = findViewById(R.id.txtResultado);
 
 
         calcular.setOnClickListener(new View.OnClickListener() {
@@ -40,10 +38,14 @@ public class CalcularCuadrado extends AppCompatActivity {
 
     public void calcularCuadrado(){
         int lad = 1;
+        String op, dat;
         Intent intent = new Intent(CalcularCuadrado.this, ResultadoCuadrado.class);
         Bundle param = new Bundle();
         lad = Integer.parseInt(lado.getText().toString());
         double area = lad * lad;
+        op = operacion.getResources().getString(R.string.area_cuadrado);
+        dat = lado.getResources().getString(R.string.lado_cuadrado).concat(String.valueOf(" " + lad));
+        guardar(op, dat, String.valueOf(area));
         param.putDouble("area", area);
         intent.putExtras(param);
         startActivity(intent);
@@ -53,15 +55,10 @@ public class CalcularCuadrado extends AppCompatActivity {
         lado.setText("");
     }
 
-    public void guardar(View v){
-        String op,dat,res;
+    public void guardar(String op, String dat, String area){
         Operacion o;
-
-        op = operacion.getText().toString();
-        dat = lado.getText().toString();
-        res = resultado.getText().toString();
-        o = new Operacion(op, dat, res);
+        o = new Operacion(op, dat, area);
         o.guardar();
-        Toast.makeText(this, "Persona Guardada éxitosamente", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.guardado_exitosamente, Toast.LENGTH_LONG).show();
     }
 }

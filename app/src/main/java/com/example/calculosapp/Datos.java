@@ -1,7 +1,5 @@
 package com.example.calculosapp;
 
-import android.widget.ArrayAdapter;
-
 import java.util.ArrayList;
 
 public class Datos {

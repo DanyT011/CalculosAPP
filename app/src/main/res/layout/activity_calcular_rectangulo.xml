@@ -8,7 +8,7 @@
     tools:context=".CalcularRectangulo">
 
     <TextView
-        android:id="@+id/lblCalcularTriangulo"
+        android:id="@+id/lblCalcularRec"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/rectangulo"

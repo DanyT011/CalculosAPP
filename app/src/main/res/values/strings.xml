@@ -2,7 +2,15 @@
     <string name="app_name">CalculosAPP</string>
     <string name="opciones">Opciones</string>
     <string name="areas">Areas</string>
+    <string name="area_cuadrado">Area Cuadrado</string>
+    <string name="area_circulo">Area Círculo</string>
+    <string name="area_rec">Area Rectángulo</string>
+    <string name="area_tri">Area Triángulo</string>
     <string name="volumnes">Volúmenes</string>
+    <string name="volumnen_esfera">Volúmenen Esfera</string>
+    <string name="volumnen_cubo">Volúmenen Cubo</string>
+    <string name="volumnen_cono">Volúmenen Cono</string>
+    <string name="volumnen_cilindro">Volúmenen Cilindro</string>
     <string name="operaciones_realiadas">Operaciones Realizadas</string>
     <string name="cuadrado">Cuadrado</string>
     <string name="rectangulo">Rectángulo</string>
@@ -12,7 +20,7 @@
     <string name="cilindro">Cilindro</string>
     <string name="cono">Cono</string>
     <string name="cubo">Cubo</string>
-    <string name="lado_cuadrado">Valor del Lado:</string>
+    <string name="lado_cuadrado">Lado:</string>
     <string name="calcular">CALCULAR</string>
     <string name="borrar">BORRAR</string>
     <string name="ok">OK</string>
@@ -25,6 +33,7 @@
     <string name="operaciones">Operaciones</string>
     <string name="datos">Datos</string>
     <string name="guardar">Guardar</string>
+    <string name="guardado_exitosamente">Operación Guardada éxitosamente</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>
