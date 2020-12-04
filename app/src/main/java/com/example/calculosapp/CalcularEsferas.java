@@ -37,14 +37,16 @@ public class CalcularEsferas extends AppCompatActivity {
         String op, dat;
         Intent intent = new Intent(CalcularEsferas.this, ResultadoEsfera.class);
         Bundle param = new Bundle();
-        rad = Double.parseDouble(radio.getText().toString());
-        double volumen = (4*(Math.PI * (Math.pow(rad,3)))/3);
-        op = operacion.getResources().getString(R.string.volumnen_esfera);
-        dat = radio.getResources().getString(R.string.radio).concat(String.valueOf(" " + rad));
-        guardar(op, dat, String.valueOf(volumen));
-        param.putDouble("volumen", volumen);
-        intent.putExtras(param);
-        startActivity(intent);
+        if(validar()){
+            rad = Double.parseDouble(radio.getText().toString());
+            double volumen = (4*(Math.PI * (Math.pow(rad,3)))/3);
+            op = operacion.getResources().getString(R.string.volumnen_esfera);
+            dat = radio.getResources().getString(R.string.radio).concat(String.valueOf(" " + rad));
+            guardar(op, dat, String.valueOf(volumen));
+            param.putDouble("volumen", volumen);
+            intent.putExtras(param);
+            startActivity(intent);
+        }
     }
 
     public void limpiar(View v){
@@ -58,5 +60,13 @@ public class CalcularEsferas extends AppCompatActivity {
         Toast.makeText(this, R.string.guardado_exitosamente, Toast.LENGTH_LONG).show();
     }
 
-    private double rad;
+    public boolean validar(){
+        if(radio.getText().toString().isEmpty()){
+            radio.setError(getString(R.string.ingrese_radio));
+            radio.requestFocus();
+            return false;
+        }
+
+        return true;
+    }
 }

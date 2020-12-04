@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">CalculosAPP</string>
     <string name="opciones">Opciones</string>
-    <string name="areas">Areas</string>
-    <string name="area_cuadrado">Area Cuadrado</string>
-    <string name="area_circulo">Area Círculo</string>
-    <string name="area_rec">Area Rectángulo</string>
-    <string name="area_tri">Area Triángulo</string>
+    <string name="areas">Áreas</string>
+    <string name="area_cuadrado">Área Cuadrado</string>
+    <string name="area_circulo">Área Círculo</string>
+    <string name="area_rec">Área Rectángulo</string>
+    <string name="area_tri">Área Triángulo</string>
     <string name="volumnes">Volúmenes</string>
     <string name="volumnen_esfera">Volúmenen Esfera</string>
-    <string name="volumnen_cubo">Volúmenen Cubo</string>
-    <string name="volumnen_cono">Volúmenen Cono</string>
-    <string name="volumnen_cilindro">Volúmenen Cilindro</string>
+    <string name="volumnen_cubo">Volúmen Cubo</string>
+    <string name="volumnen_cono">Volúmen Cono</string>
+    <string name="volumnen_cilindro">Volúmen Cilindro</string>
     <string name="operaciones_realiadas">Operaciones Realizadas</string>
     <string name="cuadrado">Cuadrado</string>
     <string name="rectangulo">Rectángulo</string>
@@ -34,6 +34,11 @@
     <string name="datos">Datos</string>
     <string name="guardar">Guardar</string>
     <string name="guardado_exitosamente">Operación Guardada éxitosamente</string>
+    <string name="ingrese_radio">Ingrese radio</string>
+    <string name="ingrese_altura">Ingrese altura</string>
+    <string name="ingrese_lado">Ingrese lado</string>
+    <string name="ingrese_lado_base">Ingrese lado base</string>
+    <string name="ingrese_lado_altura">Ingrese lado altura</string>
 
     <string-array name="opciones">
         <item>@string/areas</item>

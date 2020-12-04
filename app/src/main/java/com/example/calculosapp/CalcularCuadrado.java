@@ -41,18 +41,16 @@ public class CalcularCuadrado extends AppCompatActivity {
         String op, dat;
         Intent intent = new Intent(CalcularCuadrado.this, ResultadoCuadrado.class);
         Bundle param = new Bundle();
-        lad = Integer.parseInt(lado.getText().toString());
-        double area = lad * lad;
-        op = operacion.getResources().getString(R.string.area_cuadrado);
-        dat = lado.getResources().getString(R.string.lado_cuadrado).concat(String.valueOf(" " + lad));
-        guardar(op, dat, String.valueOf(area));
-        param.putDouble("area", area);
-        intent.putExtras(param);
-        startActivity(intent);
-    }
-
-    public void limpiar(View v){
-        lado.setText("");
+        if(validar()){
+            lad = Integer.parseInt(lado.getText().toString());
+            double area = lad * lad;
+            op = operacion.getResources().getString(R.string.area_cuadrado);
+            dat = lado.getResources().getString(R.string.lado_cuadrado).concat(String.valueOf(" " + lad));
+            guardar(op, dat, String.valueOf(area));
+            param.putDouble("area", area);
+            intent.putExtras(param);
+            startActivity(intent);
+        }
     }
 
     public void guardar(String op, String dat, String area){
@@ -60,5 +58,18 @@ public class CalcularCuadrado extends AppCompatActivity {
         o = new Operacion(op, dat, area);
         o.guardar();
         Toast.makeText(this, R.string.guardado_exitosamente, Toast.LENGTH_LONG).show();
+    }
+    public void limpiar(View v){
+        lado.setText("");
+    }
+
+    public boolean validar(){
+        if(lado.getText().toString().isEmpty()){
+            lado.setError(getString(R.string.ingrese_lado));
+            lado.requestFocus();
+            return false;
+        }
+
+        return true;
     }
 }

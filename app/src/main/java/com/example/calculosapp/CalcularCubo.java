@@ -36,18 +36,16 @@ public class CalcularCubo extends AppCompatActivity {
         String op, dat;
         Intent intent = new Intent(CalcularCubo.this, ResultadoCubo.class);
         Bundle param = new Bundle();
-        lad = Integer.parseInt(lado.getText().toString());
-        double volumen = lad * lad * lad;
-        op = operacion.getResources().getString(R.string.volumnen_cubo);
-        dat = lado.getResources().getString(R.string.lado_cuadrado).concat(String.valueOf(" " + lad));
-        guardar(op, dat, String.valueOf(volumen));
-        param.putDouble("volumen", volumen);
-        intent.putExtras(param);
-        startActivity(intent);
-    }
-
-    public void limpiar(View v){
-        lado.setText("");
+        if(validar()){
+            lad = Integer.parseInt(lado.getText().toString());
+            double volumen = lad * lad * lad;
+            op = operacion.getResources().getString(R.string.volumnen_cubo);
+            dat = lado.getResources().getString(R.string.lado_cuadrado).concat(String.valueOf(" " + lad));
+            guardar(op, dat, String.valueOf(volumen));
+            param.putDouble("volumen", volumen);
+            intent.putExtras(param);
+            startActivity(intent);
+        }
     }
 
     public void guardar(String op, String dat, String volumen){
@@ -55,5 +53,19 @@ public class CalcularCubo extends AppCompatActivity {
         o = new Operacion(op, dat, volumen);
         o.guardar();
         Toast.makeText(this, R.string.guardado_exitosamente, Toast.LENGTH_LONG).show();
+    }
+
+    public void limpiar(View v){
+        lado.setText("");
+    }
+
+    public boolean validar(){
+        if(lado.getText().toString().isEmpty()){
+            lado.setError(getString(R.string.ingrese_lado));
+            lado.requestFocus();
+            return false;
+        }
+
+        return true;
     }
 }

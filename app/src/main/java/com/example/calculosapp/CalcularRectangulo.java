@@ -38,16 +38,18 @@ public class CalcularRectangulo extends AppCompatActivity {
         String op, dat;
         Intent intent = new Intent(CalcularRectangulo.this, ResultadoRectangulo.class);
         Bundle param = new Bundle();
-        ladoB = Integer.parseInt(ladoBase.getText().toString());
-        ladoA = Integer.parseInt(ladoAltura.getText().toString());
-        double area = ladoA * ladoB;
-        op = operacion.getResources().getString(R.string.area_rec);
-        dat = ladoBase.getResources().getString(R.string.lado_base).concat(String.valueOf(" " + ladoB)) + "\n";
-        dat += ladoAltura.getResources().getString(R.string.lado_altura).concat(String.valueOf(" " + ladoA));
-        guardar(op, dat, String.valueOf(area));
-        param.putDouble("area", area);
-        intent.putExtras(param);
-        startActivity(intent);
+        if(validar()){
+            ladoB = Integer.parseInt(ladoBase.getText().toString());
+            ladoA = Integer.parseInt(ladoAltura.getText().toString());
+            double area = ladoA * ladoB;
+            op = operacion.getResources().getString(R.string.area_rec);
+            dat = ladoBase.getResources().getString(R.string.lado_base).concat(String.valueOf(" " + ladoB)) + "\n";
+            dat += ladoAltura.getResources().getString(R.string.lado_altura).concat(String.valueOf(" " + ladoA));
+            guardar(op, dat, String.valueOf(area));
+            param.putDouble("area", area);
+            intent.putExtras(param);
+            startActivity(intent);
+        }
     }
 
 
@@ -64,4 +66,19 @@ public class CalcularRectangulo extends AppCompatActivity {
         ladoBase.requestFocus();
     }
 
+    public boolean validar(){
+        if(ladoBase.getText().toString().isEmpty()){
+            ladoBase.setError(getString(R.string.ingrese_lado_base));
+            ladoBase.requestFocus();
+            return false;
+        }
+
+        if(ladoAltura.getText().toString().isEmpty()){
+            ladoAltura.setError(getString(R.string.ingrese_lado_altura));
+            ladoAltura.requestFocus();
+            return false;
+        }
+
+        return true;
+    }
 }

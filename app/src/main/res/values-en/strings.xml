@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CalculosAPP</string>
+    <string name="opciones">Options</string>
+    <string name="areas">Areas</string>
+    <string name="area_cuadrado">Square Area</string>
+    <string name="area_circulo">Circle Area</string>
+    <string name="area_rec">Rectangular Area</string>
+    <string name="area_tri">Triangle Area</string>
+    <string name="volumnes">Volumes</string>
+    <string name="volumnen_esfera">Sphere Volume</string>
+    <string name="volumnen_cubo">Cube Volume</string>
+    <string name="volumnen_cono">Cone Cube Volume</string>
+    <string name="volumnen_cilindro">Cylinder Volume</string>
+    <string name="operaciones_realiadas">Operations Performed</string>
+    <string name="cuadrado">Square</string>
+    <string name="rectangulo">Rectangle</string>
+    <string name="triangulo">Triangle</string>
+    <string name="circulo">Circle</string>
+    <string name="esfera">Sphere</string>
+    <string name="cilindro">Cylinder</string>
+    <string name="cono">Cone</string>
+    <string name="cubo">Cube</string>
+    <string name="lado_cuadrado">Side:</string>
+    <string name="calcular">CALCULATE</string>
+    <string name="borrar">DELETE</string>
+    <string name="ok">OK</string>
+    <string name="resultado">Result</string>
+    <string name="lado_base">Base side:</string>
+    <string name="lado_altura">Height Side:</string>
+    <string name="radio">Radio:</string>
+    <string name="altura">Height:</string>
+    <string name="numero">No</string>
+    <string name="operaciones">Operations</string>
+    <string name="datos">Data</string>
+    <string name="guardar">Save</string>
+    <string name="guardado_exitosamente">Operation Saved Successfully</string>
+    <string name="ingrese_radio">Enter radio</string>
+    <string name="ingrese_altura">Enter height</string>
+    <string name="ingrese_lado">Enter side</string>
+    <string name="ingrese_lado_base">Enter base side</string>
+    <string name="ingrese_lado_altura">Enter height side</string>
+</resources>

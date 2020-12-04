@@ -37,18 +37,16 @@ public class CalcularCirculo extends AppCompatActivity {
         String op, dat;
         Intent intent = new Intent(CalcularCirculo.this, ResultadoCirculo.class);
         Bundle param = new Bundle();
-        rad = Double.parseDouble(radio.getText().toString());
-        double area = (Math.PI * (Math.pow(rad,2)))/2;
-        op = operacion.getResources().getString(R.string.area_circulo);
-        dat = radio.getResources().getString(R.string.radio).concat(String.valueOf(" " + rad));
-        guardar(op, dat, String.valueOf(area));
-        param.putDouble("area", area);
-        intent.putExtras(param);
-        startActivity(intent);
-    }
-
-    public void limpiar(View v){
-        radio.setText("");
+        if(validar()){
+            rad = Double.parseDouble(radio.getText().toString());
+            double area = (Math.PI * (Math.pow(rad,2)))/2;
+            op = operacion.getResources().getString(R.string.area_circulo);
+            dat = radio.getResources().getString(R.string.radio).concat(String.valueOf(" " + rad));
+            guardar(op, dat, String.valueOf(area));
+            param.putDouble("area", area);
+            intent.putExtras(param);
+            startActivity(intent);
+        }
     }
 
     public void guardar(String op, String dat, String area){
@@ -56,5 +54,19 @@ public class CalcularCirculo extends AppCompatActivity {
         o = new Operacion(op, dat, area);
         o.guardar();
         Toast.makeText(this, R.string.guardado_exitosamente, Toast.LENGTH_LONG).show();
+    }
+
+    public void limpiar(View v){
+        radio.setText("");
+    }
+
+    public boolean validar(){
+        if(radio.getText().toString().isEmpty()){
+            radio.setError(getString(R.string.ingrese_radio));
+            radio.requestFocus();
+            return false;
+        }
+
+        return true;
     }
 }

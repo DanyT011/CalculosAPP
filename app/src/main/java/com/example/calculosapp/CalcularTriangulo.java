@@ -37,22 +37,18 @@ public class CalcularTriangulo extends AppCompatActivity {
         String op, dat;
         Intent intent = new Intent(CalcularTriangulo.this, ResultadoTriangulo.class);
         Bundle param = new Bundle();
-        ladoB = Integer.parseInt(ladoBase.getText().toString());
-        ladoA = Integer.parseInt(ladoAltura.getText().toString());
-        double area = (ladoA * ladoB)/2;
-        op = operacion.getResources().getString(R.string.area_tri);
-        dat = ladoBase.getResources().getString(R.string.lado_base).concat(String.valueOf(" " + ladoB)) + "\n";
-        dat += ladoAltura.getResources().getString(R.string.lado_altura).concat(String.valueOf(" " + ladoA));
-        guardar(op, dat, String.valueOf(area));
-        param.putDouble("area", area);
-        intent.putExtras(param);
-        startActivity(intent);
-    }
-
-    public void limpiar(View v){
-        ladoBase.setText("");
-        ladoAltura.setText("");
-        ladoBase.requestFocus();
+        if(validar()){
+            ladoB = Integer.parseInt(ladoBase.getText().toString());
+            ladoA = Integer.parseInt(ladoAltura.getText().toString());
+            double area = (ladoA * ladoB)/2;
+            op = operacion.getResources().getString(R.string.area_tri);
+            dat = ladoBase.getResources().getString(R.string.lado_base).concat(String.valueOf(" " + ladoB)) + "\n";
+            dat += ladoAltura.getResources().getString(R.string.lado_altura).concat(String.valueOf(" " + ladoA));
+            guardar(op, dat, String.valueOf(area));
+            param.putDouble("area", area);
+            intent.putExtras(param);
+            startActivity(intent);
+        }
     }
 
     public void guardar(String op, String dat, String area){
@@ -61,4 +57,27 @@ public class CalcularTriangulo extends AppCompatActivity {
         o.guardar();
         Toast.makeText(this, R.string.guardado_exitosamente, Toast.LENGTH_LONG).show();
     }
+
+    public void limpiar(View v){
+        ladoBase.setText("");
+        ladoAltura.setText("");
+        ladoBase.requestFocus();
+    }
+
+    public boolean validar(){
+        if(ladoBase.getText().toString().isEmpty()){
+            ladoBase.setError(getString(R.string.ingrese_lado_base));
+            ladoBase.requestFocus();
+            return false;
+        }
+
+        if(ladoAltura.getText().toString().isEmpty()){
+            ladoAltura.setError(getString(R.string.ingrese_lado_altura));
+            ladoAltura.requestFocus();
+            return false;
+        }
+
+        return true;
+    }
+
 }
